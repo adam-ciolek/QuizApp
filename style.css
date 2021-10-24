@@ -1,0 +1,44 @@
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background-image: url("https://i.postimg.cc/DfGrLVFf/cropped-1920-1080-403408.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	letter-spacing: 1.5px;
+}
+
+.intro {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+}
+
+.title {
+	position: relative;
+	text-align: center;
+	top: 50px;
+	color: #fff;
+	font-size: 100px;
+	font-family: "Cinzel", serif;
+}
+
+.start {
+	cursor: pointer;
+	color: #c0bfb6;
+	font-size: 60px;
+	transition: all 200ms ease;
+	text-decoration: none;
+}
+
+.start:hover {
+	color: rgb(243, 243, 243);
+}

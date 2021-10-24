@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameOfThrone</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    
+    <div class="shadow"></div>
+    <div class="container">
+        <h1 class="title">GameOfThrone</h1>
+        <div id="game-view">
+            <div class="counter">
+                <p class="question-counter">Questions:</p>
+                <h1 id="counter">1/10</h1>
+            </div>
+        </div>
+        <!-- Questions -->
+        <div class="box-question">
+            <p class="questions"></p>
+        </div>
+        <div class="container-questions">
+            <div class ="box-answers">
+                <p class="select-question">A</p>
+                <p class="answer" data-answer="a">Answer1</p>
+            </div>
+            <div class="box-answers">
+                <p class="select-question">B</p>
+                <p class="answer" data-answer="b">No co ty gadasz</p>
+            </div>
+            <div class="box-answers">
+                <p class="select-question">C</p>
+                <p class="answer" data-answer="c">Answer3</p>
+            </div>
+            <div class="box-answers">
+                <p class="select-question">D</p>
+                <p class="answer" data-answer="d">Answer4</p>
+            </div>
+        </div>
+        
+             <div class="modal">
+                 <div class="modal-box">
+                     <div class="score">
+                         <p class="score-counter">Twój wynik to :</p>
+                         <h1 id="score">0</h1>
+                     </div>
+                         <a href="game.html" class="restart">Zagraj jeszcze raz</a>
+                 </div>
+             </div>
+
+    </div>
+
+    
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
