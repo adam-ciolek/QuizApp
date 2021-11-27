@@ -1,12 +1,11 @@
 import {questionsStore} from './questions.js'
 
-const gameView = document.querySelector('#game-view');
-const boxQuestion = document.querySelector('.box-question')
-const conteinerQuestion = document.querySelector('.container-questions');
-const counter = document.querySelector('#counter');
-const score = document.querySelector('#score');
-const questions = document.querySelector('.questions');
-const answers = [...document.querySelectorAll('.answer')];
+const gameView = document.querySelector('.question__count');
+const counter = document.querySelector('.question__count__numbers');
+const conteinerQuestion = document.querySelector('.container');
+const score = document.querySelector('#modal__box__scores-result');
+const questions = document.querySelector('.question__count__question');
+const answers = [...document.querySelectorAll('.container__answer')];
 const modal = document.querySelector('.modal')
 
 let acceptingAnswers = true;
@@ -25,12 +24,10 @@ const startGame = () => {
 }
 
 const startQuiz = () => {
-    
     if(newQuestionsStore.length === 0 || counterQuestion > MAX){
         gameView.style.display = 'none';
-        boxQuestion.style.display = 'none';
         conteinerQuestion.style.display = 'none';
-        modal.style.display = 'flex';
+        modal.style.display = 'block';
         showModal()
         return
     }
@@ -51,7 +48,6 @@ const startQuiz = () => {
     acceptingAnswers = true;
 
 }
-
     answers.forEach(answer => {
         answer.addEventListener('click', e => {
             if(!acceptingAnswers) return

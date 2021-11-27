@@ -1,44 +1,77 @@
-*,
-::after,
-::before {
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Nunito+Sans&display=swap");
+
+:root {
+	--clr-primary: hsl(0, 0%, 100%);
+	--clr-secondary: hsl(204, 43%, 48%);
+	--clr-button: hsl(33, 77%, 60%);
+
+	--ff-title: "Cinzel", serif;
+	--ff-text: "Nunito Sans", sans-serif;
+
+	--fs-small: 2rem;
+
+	--ls: 1.2px;
+}
+
+@media (min-width: 765px) {
+	:root {
+		--fs-small: 4rem;
+	}
+}
+
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
 body {
-	height: 100vh;
-	background-image: url("https://i.postimg.cc/DfGrLVFf/cropped-1920-1080-403408.jpg");
+	font-size: 62.5%;
+	text-align: center;
+	background-image: url("./img/cropped-1920-1080-403408.jpg");
 	background-position: center;
-	background-repeat: no-repeat;
 	background-size: cover;
-	letter-spacing: 1.5px;
+	background-repeat: no-repeat;
+	min-height: 100vh;
 }
 
-.intro {
+.shadow {
 	position: absolute;
-	transform: translate(-50%, -50%);
-	left: 50%;
-	top: 50%;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: -1;
 }
 
 .title {
-	position: relative;
-	text-align: center;
-	top: 50px;
-	color: #fff;
-	font-size: 100px;
-	font-family: "Cinzel", serif;
+	padding-top: 50px;
+	font-size: var(--fs-small);
 }
 
-.start {
-	cursor: pointer;
-	color: #c0bfb6;
-	font-size: 60px;
-	transition: all 200ms ease;
+.subtitle {
+	margin-top: 10px;
+	font-size: calc(var(--fs-small) - 0.2rem);
+}
+
+.title,
+.subtitle {
+	color: var(--clr-secondary);
+	font-family: var(--ff-title);
+}
+
+.intro {
+	margin-top: 200px;
+}
+
+.intro > a {
+	letter-spacing: var(--ls);
 	text-decoration: none;
+	font-size: var(--fs-small);
+	color: var(--clr-button);
+	transition: all 0.4s ease;
 }
 
-.start:hover {
-	color: rgb(243, 243, 243);
+.intro > a:hover {
+	--clr-button: hsl(33, 77%, 40%);
+	color: --clr-button;
+	transform: translateY(200px);
 }
